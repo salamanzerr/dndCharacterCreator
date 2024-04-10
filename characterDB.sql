@@ -1,6 +1,6 @@
 /* characterDB.sql i have no idea if im doing this right -J */
 CREATE TABLE characters (
-  characterID NUMERIC(10) NOT NULL,
+  characterID INT(10) NOT NULL,
   race varchar(50) DEFAULT NULL,
   class varchar(50) DEFAULT NULL,
   gender varchar(50) DEFAULT NULL,  
@@ -8,33 +8,35 @@ CREATE TABLE characters (
   );
 
 CREATE TABLE abilities (
-  strength NUMERIC NOT NULL,
-  dexterity NUMERIC NOT NULL,
-  constitution NUMERIC NOT NULL,
-  intelligence NUMERIC NOT NULL,
-  wisdoom NUMERIC NOT NULL,
-  charisma NUMERIC NOT NULL,
+  abilityID INT NOT NULL,
+  strength INT NOT NULL,
+  dexterity INT NOT NULL,
+  constitution INT NOT NULL,
+  intelligence INT NOT NULL,
+  wisdoom INT NOT NULL,
+  charisma INT NOT NULL,
+  PRIMARY KEY(abilityID),
   FOREIGN KEY (characterID) REFERENCES characters(characterID)
 );
 
 CREATE TABLE skills (
-  acrobatics NUMERIC NOT NULL,
-  animalHandling NUMERIC NOT NULL,
-  arcana NUMERIC NOT NULL,
-  athletics NUMERIC NOT NULL,
-  deception NUMERIC NOT NULL,
-  history NUMERIC NOT NULL,
-  insight NUMERIC NOT NULL,
-  intimidation NUMERIC NOT NULL,
-  investigation NUMERIC NOT NULL,
-  medicine NUMERIC NOT NULL,
-  nature NUMERIC NOT NULL,
-  perception NUMERIC NOT NULL,
-  performance NUMERIC NOT NULL,
-  persuasion NUMERIC NOT NULL,
-  religion NUMERIC NOT NULL,
-  sleightOfHand NUMERIC NOT NULL,
-  stealth NUMERIC NOT NULL,
-  survivial NUMERIC NOT NULL,
+  acrobatics INT NOT NULL,
+  animalHandling INT NOT NULL,
+  arcana INT NOT NULL,
+  athletics INT NOT NULL,
+  deception INT NOT NULL,
+  history INT NOT NULL,
+  insight INT NOT NULL,
+  intimidation INT NOT NULL,
+  investigation INT NOT NULL,
+  medicine INT NOT NULL,
+  nature INT NOT NULL,
+  perception INT NOT NULL,
+  performance INT NOT NULL,
+  persuasion INT NOT NULL,
+  religion INT NOT NULL,
+  sleightOfHand INT NOT NULL,
+  stealth INT NOT NULL,
+  survivial INT NOT NULL,
   FOREIGN KEY (characterID) REFERENCES characters(characterID)
 );
