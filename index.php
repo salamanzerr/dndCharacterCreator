@@ -7,6 +7,7 @@ Other pages will need to be created to interact with DB, make character, etc.
 4.) Page to submit prompt to DnD API to generate character automatically
 5.) 
 -->
+<!--Janine Beall,      -->
 
 <!DOCTYPE html>
 <html>
