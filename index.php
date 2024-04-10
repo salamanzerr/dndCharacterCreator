@@ -13,7 +13,7 @@ Other pages will need to be created to interact with DB, make character, etc.
 <html>
   <head>
    <title>DnD Character Sheet</title>
-   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 
 
