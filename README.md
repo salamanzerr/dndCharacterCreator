@@ -1,7 +1,7 @@
 # dndCharacterCreator
 Website to create and store Dungeons &amp; Dragons characters within a database. Can create a character manually or use the integrated API to generate a character.
 
-## Pages include:
+## Pages include (names subject to change):
 1. <strong>index.html:</strong> landing page to get to others
 2. <strong>characterDB.php:</strong> Page to look at, interact with database of character info
 3. <strong>charSheet.php:</strong> Page for manual character creation
