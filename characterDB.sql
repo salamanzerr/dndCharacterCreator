@@ -2,9 +2,9 @@
 CREATE TABLE characters (
   /*characterID INTEGER PRIMARY KEY AUTO_INCREMENT,*/ /*added auto incrementation to primary keys*/
   characterID INTEGER NOT NULL,
-  race varchar(50) DEFAULT NULL,
-  class varchar(50) DEFAULT NULL,
-  gender varchar(50) DEFAULT NULL,  
+  race varchar(50),
+  class varchar(50),
+  gender varchar(50),  
   PRIMARY KEY (characterID)
   );
 
