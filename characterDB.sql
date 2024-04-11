@@ -13,7 +13,7 @@ CREATE TABLE abilities (
   dexterity INT NOT NULL,
   constitution INT NOT NULL,
   intelligence INT NOT NULL,
-  wisdoom INT NOT NULL,
+  wisdom INT NOT NULL,
   charisma INT NOT NULL,
   PRIMARY KEY(abilityID),
   FOREIGN KEY (characterID) REFERENCES characters(characterID)
