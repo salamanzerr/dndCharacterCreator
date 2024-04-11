@@ -4,7 +4,7 @@ CREATE TABLE characters (
   race varchar(50) DEFAULT NULL,
   class varchar(50) DEFAULT NULL,
   gender varchar(50) DEFAULT NULL/*,*/  
-  /*PRIMARY KEY (characterID)*/
+  PRIMARY KEY (characterID)
   );
 
 CREATE TABLE abilities (
