@@ -17,7 +17,7 @@ CREATE TABLE abilities (
   wisdom INTEGER NOT NULL,
   charisma INTEGER NOT NULL,
  /* PRIMARY KEY(abilityID),*/
- /* characterID INTEGER,*/ /*foreign keys need to be defined in the table*/
+  characterID INTEGER, /*foreign keys need to be defined in the table*/
   FOREIGN KEY (characterID) REFERENCES characters(characterID)
 );
 
@@ -41,6 +41,6 @@ CREATE TABLE skills (
   sleightOfHand INTEGER NOT NULL,
   stealth INTEGER NOT NULL,
   survival INTEGER NOT NULL,
-  /*characterID INTEGER,*/ /*foreign keys need to be defined in the table*/
+  characterID INTEGER, /*foreign keys need to be defined in the table*/
   FOREIGN KEY (characterID) REFERENCES characters(characterID)
 );
