@@ -1,30 +1,30 @@
   /* characterDB.sql i have no idea if im doing this right -J */
 CREATE TABLE characters (
-  /*characterID INTEGER PRIMARY KEY AUTO_INCREMENT,*/ /*added auto incrementation to primary keys*/
-  characterID INTEGER NOT NULL,
+  characterID INTEGER PRIMARY KEY AUTO_INCREMENT, /*added auto incrementation to primary keys*/
+  /*characterID INTEGER NOT NULL,*/
   race VARCHAR(50),
   class VARCHAR(50),
-  gender VARCHAR(50),  
-  PRIMARY KEY (characterID)
+  gender VARCHAR(50)
+  /*PRIMARY KEY (characterID)*/
   );
 
 CREATE TABLE abilities (
-  abilityID INTEGER NOT NULL,
-  /*abilityID INTEGER PRIMARY KEY AUTO_INCREMENT,*/
+  /*abilityID INTEGER NOT NULL,*/
+  abilityID INTEGER PRIMARY KEY AUTO_INCREMENT,
   strength INTEGER NOT NULL,
   dexterity INTEGER NOT NULL,
   constitution INTEGER NOT NULL,
   intelligence INTEGER NOT NULL,
   wisdom INTEGER NOT NULL,
   charisma INTEGER NOT NULL,
-  PRIMARY KEY (abilityID),
+  /*PRIMARY KEY (abilityID),*/
   characterID INTEGER, /*foreign keys need to be defined in the table*/
   FOREIGN KEY (characterID) REFERENCES characters(characterID)
 );
 
 CREATE TABLE skills (
-  /*skillID INTEGER PRIMARY KEY AUTO_INCREMENT,*/ /*added primary key for skills*/
-  skillID INTEGER NOT NULL,
+  skillID INTEGER PRIMARY KEY AUTO_INCREMENT, /*added primary key for skills*/
+  /*skillID INTEGER NOT NULL,*/
   acrobatics INTEGER NOT NULL,
   animalHandling INTEGER NOT NULL,
   arcana INTEGER NOT NULL,
