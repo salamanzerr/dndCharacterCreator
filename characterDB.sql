@@ -4,7 +4,7 @@ CREATE TABLE characters (
   characterID INTEGER NOT NULL,
   race varchar(50) DEFAULT NULL,
   class varchar(50) DEFAULT NULL,
-  gender varchar(50) DEFAULT NULL  
+  gender varchar(50) DEFAULT NULL,  
   PRIMARY KEY (characterID)
   );
 
@@ -17,7 +17,7 @@ CREATE TABLE abilities (
   intelligence INTEGER NOT NULL,
   wisdom INTEGER NOT NULL,
   charisma INTEGER NOT NULL,
-  PRIMARY KEY(abilityID),
+  PRIMARY KEY (abilityID),
   characterID INTEGER, /*foreign keys need to be defined in the table*/
   FOREIGN KEY (characterID) REFERENCES characters(characterID)
 );
