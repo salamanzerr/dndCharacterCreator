@@ -1,6 +1,6 @@
   /* characterDB.sql i have no idea if im doing this right -J */
 CREATE TABLE characters (
-  characterID INTEGER PRIMARY KEY AUTOINCREMENT, /*added auto incrementation to primary keys*/
+  characterID INTEGER PRIMARY KEY AUTO_INCREMENT, /*added auto incrementation to primary keys*/
   race varchar(50) DEFAULT NULL,
   class varchar(50) DEFAULT NULL,
   gender varchar(50) DEFAULT NULL/*,*/  
@@ -9,7 +9,7 @@ CREATE TABLE characters (
 
 CREATE TABLE abilities (
   /*abilityID INT NOT NULL,*/
-  abilityID INTEGER PRIMARY KEY AUTOINCREMENT,
+  abilityID INTEGER PRIMARY KEY AUTO_INCREMENT,
   strength INT NOT NULL,
   dexterity INT NOT NULL,
   constitution INT NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE abilities (
 );
 
 CREATE TABLE skills (
-  skillID INTEGER PRIMARY KEY AUTOINCREMENT, /*added primary key for skills*/
+  skillID INTEGER PRIMARY KEY AUTO_INCREMENT, /*added primary key for skills*/
   acrobatics INT NOT NULL,
   animalHandling INT NOT NULL,
   arcana INT NOT NULL,
