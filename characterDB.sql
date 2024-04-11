@@ -1,25 +1,28 @@
-/* characterDB.sql i have no idea if im doing this right -J */
+  /* characterDB.sql i have no idea if im doing this right -J */
 CREATE TABLE characters (
-  characterID INT(10) NOT NULL,
+  characterID INTEGER PRIMARY KEY AUTOINCREMENT, /*added auto incrementation to primary keys*/
   race varchar(50) DEFAULT NULL,
   class varchar(50) DEFAULT NULL,
-  gender varchar(50) DEFAULT NULL,  
-  PRIMARY KEY (characterID)
+  gender varchar(50) DEFAULT NULL/*,*/  
+  /*PRIMARY KEY (characterID)*/
   );
 
 CREATE TABLE abilities (
-  abilityID INT NOT NULL,
+  /*abilityID INT NOT NULL,*/
+  abilityID INTEGER PRIMARY KEY AUTOINCREMENT,
   strength INT NOT NULL,
   dexterity INT NOT NULL,
   constitution INT NOT NULL,
   intelligence INT NOT NULL,
   wisdom INT NOT NULL,
   charisma INT NOT NULL,
-  PRIMARY KEY(abilityID),
+ /* PRIMARY KEY(abilityID),*/
+  characterID INTEGER, /*foreign keys need to be defined in the table*/
   FOREIGN KEY (characterID) REFERENCES characters(characterID)
 );
 
 CREATE TABLE skills (
+  skillID INTEGER PRIMARY KEY AUTOINCREMENT, /*added primary key for skills*/
   acrobatics INT NOT NULL,
   animalHandling INT NOT NULL,
   arcana INT NOT NULL,
@@ -37,6 +40,7 @@ CREATE TABLE skills (
   religion INT NOT NULL,
   sleightOfHand INT NOT NULL,
   stealth INT NOT NULL,
-  survivial INT NOT NULL,
+  survival INT NOT NULL,
+  characterID INTEGER, /*foreign keys need to be defined in the table*/
   FOREIGN KEY (characterID) REFERENCES characters(characterID)
 );
