@@ -16,7 +16,7 @@ CREATE TABLE abilities (
   intelligence INTEGER NOT NULL,
   wisdom INTEGER NOT NULL,
   charisma INTEGER NOT NULL,
- /* PRIMARY KEY(abilityID),*/
+  PRIMARY KEY(abilityID),
   characterID INTEGER, /*foreign keys need to be defined in the table*/
   FOREIGN KEY (characterID) REFERENCES characters(characterID)
 );
