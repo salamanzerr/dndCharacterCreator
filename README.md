@@ -11,6 +11,6 @@ Website to create and store Dungeons &amp; Dragons characters within a database.
 
 Other ideas:
 - Image generation API
-- Allow accounts to be made to save character info? I don't know how that would even work though
+- Allow accounts to be made to save character info? Maybe using Firebase
 
 Project created for CSC-3212: Web Technologies
