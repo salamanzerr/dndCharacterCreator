@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Redirect back to the form or any other page after insertion
-    header('Location: index.php');
+    header('Location: charCreator.php.php');
 }
 ?>
 
