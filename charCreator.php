@@ -115,6 +115,8 @@ $statement2->closeCursor();
   <?php endforeach; ?>
   </tbody>
   </table>
+  <footer>Copyright &copy; 2024 Alec Manzer, Sam Zito, 
+  Fernando Moran, Janine Beall, Kennedy Greene</footer>
 </body>
 
 </html>
