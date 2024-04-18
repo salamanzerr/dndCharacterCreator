@@ -9,6 +9,12 @@ Website to create and store Dungeons &amp; Dragons characters within a database.
 5. <strong>generateImage.php:</strong> Page to generate an AI image of an existing character in the database
 6. <strong>bugReport.php:</strong> Reporting a bug, simple PHP form
 
+## New Stuff:
+1. <strong>Files added: charDB.php, update.php, processUpdate.php</strong>
+   - these three files allow the user to see all the characters in a table, edit those characters stats, and save those edited stats to the DB
+2. <strong>Files updated: charCreator.php, form.php</strong>
+   - added the skills to the form in charCreator.php, form.php can now insert the skills from the form into the DB
+
 Other ideas:
 - Image generation API
 - Allow accounts to be made to save character info? Maybe using [Firebase](https://firebase.google.com)
