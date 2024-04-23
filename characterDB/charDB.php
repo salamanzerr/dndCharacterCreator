@@ -127,7 +127,7 @@ $statement->closeCursor();
      <td><?php echo $product['stealth']; ?></td>
      <td><?php echo $product['survival']; ?></td>
      <td>
-        <form action="update.php" method="post">
+        <form action="../updateCharacter/update.php" method="post">
                 <input type="hidden" name="characterID" 
                        value="<?php echo htmlspecialchars($product['characterID']); ?>">
                 <input type="submit" value="Edit">
