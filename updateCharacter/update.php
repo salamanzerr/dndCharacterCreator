@@ -1,7 +1,7 @@
 <!-- update.php -->
 
 <?php
-require_once('database.php');
+require_once('../database.php');
 
 // check if characterID is passed
 if(isset($_POST['characterID'])){
