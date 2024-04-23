@@ -1,5 +1,5 @@
 <?php
-require_once('database.php');
+require_once('../database.php');
 
 $query = 'SELECT * FROM characters';
 $statement = $db->prepare($query);
