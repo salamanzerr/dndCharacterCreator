@@ -1,1 +1,6 @@
-Create a dropdown for races and classes
+Alec
+- bugReport page
+- landing page
+
+Unassigned
+- Create a dropdown for races and classes
