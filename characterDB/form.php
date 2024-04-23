@@ -1,5 +1,5 @@
 <?php
-require_once('database.php');
+require_once('../database.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['race']) && isset($_POST['class']) && isset($_POST['gender'])) {
