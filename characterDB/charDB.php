@@ -1,7 +1,7 @@
 <!-- charDB.php -->
 
 <?php
-require_once('database.php');
+require_once('../database.php');
 
 $query = 'SELECT characters.characterID, race, class, gender, 
           abilityID, strength, dexterity, constitution, intelligence, wisdom, charisma,
