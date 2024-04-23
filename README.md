@@ -1,5 +1,5 @@
 # dndCharacterCreator
-Website to create and store Dungeons &amp; Dragons characters within a database. Can create a character manually or use the integrated API to generate a character.
+Website to create and store Dungeons &amp; Dragons 5e characters within a database. Can create a character manually, update existing characters, and report any bugs or changes on the site.
 
 ## Pages include (names subject to change):
 1. <strong>landing:</strong> landing page to get to others
@@ -19,6 +19,7 @@ possibly:
    - added the skills to the form in charCreator.php, form.php can now insert the skills from the form into the DB
 
 Other ideas:
+- Generating a character using the DnD API
 - Image generation API
 - Allow accounts to be made to save character info? Maybe using [Firebase](https://firebase.google.com)
 
