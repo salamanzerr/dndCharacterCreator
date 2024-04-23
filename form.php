@@ -4,9 +4,9 @@ require_once('database.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['race']) && isset($_POST['class']) && isset($_POST['gender'])) {
         // Insert character data
-        $race = $_POST['race'];
-        $class = $_POST['class'];
-        $gender = $_POST['gender'];
+        $race = htmlspecialchars($_POST['race']);
+        $class = htmlspecialchars($_POST['class']);
+        $gender = htmlspecialchars($_POST['gender']);
         
         $query = 'INSERT INTO characters (race, class, gender) VALUES (:race, :class, :gender)';
         $statement = $db->prepare($query);
@@ -23,12 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if (isset($_POST['strength']) && isset($_POST['dexterity']) && isset($_POST['constitution']) && isset($_POST['intelligence']) && isset($_POST['wisdom']) && isset($_POST['charisma'])) {
         // Insert ability data
-        $str = $_POST['strength'];
-        $dex = $_POST['dexterity'];
-        $con = $_POST['constitution'];
-        $int = $_POST['intelligence'];
-        $wis = $_POST['wisdom'];
-        $char = $_POST['charisma'];
+        $str = htmlspecialchars($_POST['strength']);
+        $dex = htmlspecialchars($_POST['dexterity']);
+        $con = htmlspecialchars($_POST['constitution']);
+        $int = htmlspecialchars($_POST['intelligence']);
+        $wis = htmlspecialchars($_POST['wisdom']);
+        $char = htmlspecialchars($_POST['charisma']);
         
         $query = 'INSERT INTO abilities (strength, dexterity, constitution, intelligence, wisdom, charisma, characterID) VALUES (:strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma, :characterID)';
         $statement = $db->prepare($query);
@@ -52,24 +52,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       isset($_POST['sleightOfHand']) && isset($_POST['stealth']) && isset($_POST['survival'])
     ){
      // Insert skill data
-    $acrobatics = $_POST['acrobatics'];
-    $animalHandling = $_POST['animalHandling'];
-    $arcana = $_POST['arcana'];
-    $athletics = $_POST['athletics'];
-    $deception = $_POST['deception'];
-    $history = $_POST['history'];
-    $insight = $_POST['insight'];
-    $intimidation = $_POST['intimidation'];
-    $investigation = $_POST['investigation'];
-    $medicine = $_POST['medicine'];
-    $nature = $_POST['nature'];
-    $perception = $_POST['perception'];
-    $performance = $_POST['performance'];
-    $persuasion = $_POST['persuasion'];
-    $religion = $_POST['religion'];
-    $sleightOfHand = $_POST['sleightOfHand'];
-    $stealth = $_POST['stealth'];
-    $survival = $_POST['survival'];
+    $acrobatics = htmlspecialchars($_POST['acrobatics']);
+    $animalHandling = htmlspecialchars($_POST['animalHandling']);
+    $arcana = htmlspecialchars($_POST['arcana']);
+    $athletics = htmlspecialchars($_POST['athletics']);
+    $deception = htmlspecialchars($_POST['deception']);
+    $history = htmlspecialchars($_POST['history']);
+    $insight = htmlspecialchars($_POST['insight']);
+    $intimidation = htmlspecialchars($_POST['intimidation']);
+    $investigation = htmlspecialchars($_POST['investigation']);
+    $medicine = htmlspecialchars($_POST['medicine']);
+    $nature = htmlspecialchars($_POST['nature']);
+    $perception = htmlspecialchars($_POST['perception']);
+    $performance = htmlspecialchars($_POST['performance']);
+    $persuasion = htmlspecialchars($_POST['persuasion']);
+    $religion = htmlspecialchars($_POST['religion']);
+    $sleightOfHand = htmlspecialchars($_POST['sleightOfHand']);
+    $stealth = htmlspecialchars($_POST['stealth']);
+    $survival = htmlspecialchars($_POST['survival']);
     
     // bruh this query...
     // it could prob be done better
