@@ -1,7 +1,7 @@
 # dndCharacterCreator
 Website to create and store Dungeons &amp; Dragons 5e characters within a database. Can create a character manually, update existing characters, and report any bugs or changes on the site.
 
-## Pages include (names subject to change):
+## Pages include:
 1. <strong>landing:</strong> landing page to get to others
 2. <strong>characterDB:</strong> Page to look at, interact with database of character info
 3. <strong>updateCharacter:</strong> Page to update an existing character in the database
