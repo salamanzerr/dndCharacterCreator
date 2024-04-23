@@ -1,7 +1,7 @@
 <!-- processUpdate.php -->
 
 <?php
-require_once('database.php');
+require_once('../database.php');
 
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
