@@ -1,9 +1,0 @@
-Alec
-- bugReport page
-- landing page
-
-Unassigned
-- Create a dropdown for races and classes
-
-Kennedy
-- Frontend for character sheet
