@@ -1,11 +1,15 @@
+body {
+    
+}
+
 .parent {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column-reverse;
     flex-flow: row wrap;
+    /* flex-direction: row; */
+    gap: 1em;
     width: 60%;
     margin: auto;
-    justify-content: space-around;
     background-color: DodgerBlue;
     border-radius: 4px;
 }

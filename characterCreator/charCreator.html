@@ -11,15 +11,39 @@
     </head>
     <body>
         <div class="parent">
-            <div class="child">Character Name</div>
-            <div class="child"></div>
-            <div class="child">
-                <div class="stats">
+            <div class="child" id="charName">Character Name</div>
+            <div class="child" id="background">
+                <form action="form.php" method="post">
+                    <label for="race">Race:</label>
+                    <input type="text" id="race" name="race" required><br>
+        
+                    <label for="class">Class:</label>
+                    <input type="text" id="class" name="class" required><br>
+        
+                    <label for="gender">Gender:</label>
+                    <input type="text" id="gender" name="gender" required><br>
+            </div>
 
-                </div>
+            <div class="child" id="abilities">
+                <label for="strength">Strength:</label>
+                <input type="number" id="strength" name="strength" min="0" max="20" required><br>
+
+                <label for="dexterity">Dexterity:</label>
+                <input type="number" id="dexterity" name="dexterity" min="0" max="20" required><br>
+
+                <label for="constitution">Constitution:</label>
+                <input type="number" id="constitution" name="constitution" min="0" max="20" required><br>
+
+                <label for="intelligence">Intelligence:</label>
+                <input type="number" id="intelligence" name="intelligence" min="0" max="20" required><br>
+
+                <label for="wisdom">Wisdom:</label>
+                <input type="number" id="wisdom" name="wisdom" min="0" max="20" required><br>
+
+                <label for="charisma">Charisma:</label>
+                <input type="number" id="charisma" name="charisma" min="0" max="20" required><br>
             </div>
             <div class="child" id="skills">
-                <form>
                     <label for="acrobatics">Acrobatics:</label>
                     <input type="number" id="acrobatics" name="acrobatics" min="0" value="0"><br>
 
