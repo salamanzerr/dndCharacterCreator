@@ -1,5 +1,5 @@
 body {
-    
+    background-image: url("../resources/dndbackground.jpg");
 }
 
 .parent {
@@ -10,17 +10,17 @@ body {
     gap: 1em;
     width: 60%;
     margin: auto;
-    background-color: DodgerBlue;
+    background-color:rgba(241, 241, 241, 0.8);
     border-radius: 4px;
 }
   
 .child {
-    background-color: #f1f1f1;
+    background-color: #c0c0c0;
     margin: 10px;
     padding: 20px;
     font-size: 20px;
-    border-radius: 15px;
-    
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 12px;
 }
 
 input[type=number], select {
