@@ -2,11 +2,12 @@
   border-radius: 25px;
   border: 2px solid #00d1c3;
   padding: 20px;
-  width: auto;
   height: auto;
   color: white;
   background-color:#161717;
   opacity: 0.7;
+  text-align: center;
+  font-size: 30px;
 }
 
 .flex-container {
@@ -32,3 +33,8 @@
    font-family: Draconis;
 }
 
+h1 {
+   font-size: 100px;
+   text-align:center;
+   -webkit-text-stroke: 0.5px white;
+}
