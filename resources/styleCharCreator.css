@@ -10,10 +10,10 @@ body {
     gap: 1em;
     width: 60%;
     margin: auto;
-    background-color:rgba(241, 241, 241, 0.8);
+    background-color:rgba(22, 23, 23, 0.8);
     border-radius: 4px;
 }
-  
+
 .child {
     background-color: #c0c0c0;
     margin: 10px;
@@ -21,13 +21,18 @@ body {
     font-size: 20px;
     border: 1px solid rgb(99, 99, 99);
     border-radius: 12px;
+    font-family: Draconis;
 }
 
+@font-face {
+   font-family: Draconis;
+   src: url(../resources/fonts/draconis/Draconis.otf);
+}
 input[type=number] {
     width: 18%;
     padding: 6px 10px;
     margin: 8px 0;
-    display: inline-block; 
+    display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
