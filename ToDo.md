@@ -16,6 +16,5 @@
 
 ### Unassigned
 - Create a dropdown for races and classes
-- bugReport page
 - Frontend for characterDB
 - Frontend for updateCharacter
