@@ -7,15 +7,17 @@ require_once('../database.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get character ID
     $characterID = $_POST['characterID'];
-    
+
     // update character info
+    $charName = $_POST['charName'];
     $race = $_POST['race'];
     $class = $_POST['class'];
     $gender = $_POST['gender'];
 
-    $queryCharacter = "UPDATE characters SET race = :race, class = :class, gender = :gender
+    $queryCharacter = "UPDATE characters SET charName = :charName, race = :race, class = :class, gender = :gender
                        WHERE characterID = :characterID";
     $statementCharacter = $db->prepare($queryCharacter);
+    $statementCharacter->bindValue(':charName', $charName);
     $statementCharacter->bindValue(':race', $race);
     $statementCharacter->bindValue(':class', $class);
     $statementCharacter->bindValue(':gender', $gender);
@@ -32,9 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $charisma = $_POST['charisma'];
 
     foreach ($strength as $index => $value) {
-        $queryAbilities = "UPDATE abilities SET strength = :strength, dexterity = :dexterity, 
-                           constitution = :constitution, intelligence = :intelligence, 
-                           wisdom = :wisdom, charisma = :charisma 
+        $queryAbilities = "UPDATE abilities SET strength = :strength, dexterity = :dexterity,
+                           constitution = :constitution, intelligence = :intelligence,
+                           wisdom = :wisdom, charisma = :charisma
                            WHERE characterID = :characterID";
         $statementAbilities = $db->prepare($queryAbilities);
         $statementAbilities->bindValue(':strength', $strength[$index]);
@@ -49,13 +51,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     //goes if success
-    header("Location: charDB.php");
+    header("Location: ../characterDB/charDB.php");
     exit();
   }
   else{
     // goes to error page
-    header("Location: databaseError.php");
+    header("Location: ../databaseError.php");
     exit();
 }
-   
+
 ?>
