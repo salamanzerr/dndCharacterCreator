@@ -1,4 +1,5 @@
 <?php
+//---------------------------------------------------->Dont forget to put ur name here
 $dsn='mysql:host=joecool.highpoint.edu;dbname=CSC3212_S24_YOURNAME_db';
 $username=YOURUSERNAME;
 $password=YOURPASSWORD;
