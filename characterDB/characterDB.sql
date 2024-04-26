@@ -1,7 +1,8 @@
-  /* characterDB.sql i have no idea if im doing this right -J */
+ /* characterDB.sql i have no idea if im doing this right -J */
 CREATE TABLE characters (
   characterID INTEGER PRIMARY KEY AUTO_INCREMENT, /*added auto incrementation to primary keys*/
   /*characterID INTEGER NOT NULL,*/
+  charName VARCHAR(50),
   race VARCHAR(50),
   class VARCHAR(50),
   gender VARCHAR(50)
