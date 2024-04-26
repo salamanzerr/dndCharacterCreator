@@ -2,14 +2,16 @@
 require_once('../database.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['race']) && isset($_POST['class']) && isset($_POST['gender'])) {
+    if (isset($_POST['charName']) && isset($_POST['race']) && isset($_POST['class']) && isset($_POST['gender'])) {
         // Insert character data
+        $charName = htmlspecialchars($_POST['charName']);
         $race = htmlspecialchars($_POST['race']);
         $class = htmlspecialchars($_POST['class']);
         $gender = htmlspecialchars($_POST['gender']);
-        
-        $query = 'INSERT INTO characters (race, class, gender) VALUES (:race, :class, :gender)';
+
+        $query = 'INSERT INTO characters (charName, race, class, gender) VALUES (:charName, :race, :class, :gender)';
         $statement = $db->prepare($query);
+        $statement->bindValue(':charName', $charName);
         $statement->bindValue(':race', $race);
         $statement->bindValue(':class', $class);
         $statement->bindValue(':gender', $gender);
@@ -20,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $statement->closeCursor();
     }
-    
+
     if (isset($_POST['strength']) && isset($_POST['dexterity']) && isset($_POST['constitution']) && isset($_POST['intelligence']) && isset($_POST['wisdom']) && isset($_POST['charisma'])) {
         // Insert ability data
         $str = htmlspecialchars($_POST['strength']);
@@ -29,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $int = htmlspecialchars($_POST['intelligence']);
         $wis = htmlspecialchars($_POST['wisdom']);
         $char = htmlspecialchars($_POST['charisma']);
-        
+
         $query = 'INSERT INTO abilities (strength, dexterity, constitution, intelligence, wisdom, charisma, characterID) VALUES (:strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma, :characterID)';
         $statement = $db->prepare($query);
         $statement->bindValue(':strength', $str);
@@ -70,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sleightOfHand = htmlspecialchars($_POST['sleightOfHand']);
     $stealth = htmlspecialchars($_POST['stealth']);
     $survival = htmlspecialchars($_POST['survival']);
-    
+
     // bruh this query...
     // it could prob be done better
 
@@ -101,7 +103,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // Redirect back to the form or any other page after insertion
-    header('Location: charCreator.php');
+    header('Location: charDB.php');
 }
 ?>
-
