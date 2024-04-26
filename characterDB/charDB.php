@@ -3,7 +3,7 @@
 <?php
 require_once('../database.php');
 
-$query = 'SELECT characters.characterID, race, class, gender, 
+$query = 'SELECT characters.characterID, charName, race, class, gender,
           abilityID, strength, dexterity, constitution, intelligence, wisdom, charisma,
           skillID, acrobatics, animalHandling, arcana, athletics, deception,
           history, insight, intimidation, investigation, medicine,
@@ -27,12 +27,19 @@ $statement->closeCursor();
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Edit Character</title>
-  <link rel="stylesheet" href="styles.css">
-
+   <link rel="stylesheet" type="text/css" href="../landing/style.css"/>
+   <link rel="stylesheet" href="../resources/styleCharCreator.css">
   <style>
     table {
       width: 100%;
       border-collapse: collapse;
+      /*background-color: white;*/
+      margin: 1%;
+      text-decoration: none;
+      color: black;
+      background-color:#161717;
+      height: 15px;
+      opacity: 0.8;
     }
 
     th, td {
@@ -42,36 +49,62 @@ $statement->closeCursor();
     }
 
     th {
-      background-color: #f2f2f2;
+      /*background-color: white;*/
     }
-    
+
     .edit-button {
       display: block;
       margin: 0 auto;
     }
+    table tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Light gray for odd rows */
+    }
+
+    table tr:nth-child(even) {
+    background-color: #ffffff; /* White for even rows */
+    }
+
   </style>
 
 </head>
 
-<h2>Character Information</h2>
-
 <body>
+
+<h1>Character Information</h2>
+
   <h1>Class Table</h1>
+
+<main>
+ <div class="nav-container">
+      <nav>
+         <ul>
+            <li><a href="../characterCreator/charCreator.php">Create from scratch</a></li>
+            <li><a href="generateCharacter.php">Generate using AI</a></li>
+            <li><a href="generateImage.php">Generate an image of a character</a></li>
+            <li><a href="../characterDB/charDB.php">View the character database</a></li>
+
+            <li><a href="../bugReport/bugReport.php">Report a bug</a></li>
+         </ul>
+      </nav>
+    </div>
+</main>
+   <div style="overflow-x: auto;">
    <table>
     <thead>
       <tr>
          <th>ID</th>
+        <th>Name</th>
         <th>Race</th>
         <th>Class</th>
         <th>Gender</th>
-        <th>Ability ID</th>
+        <!--<th>Ability ID</th>-->
         <th>Strength</th>
         <th>Dexterity</th>
         <th>Constitution</th>
         <th>Intelligence</th>
         <th>Wisdom</th>
         <th>Charisma</th>
-        <th>Skill ID</th>
+        <!--<th>Skill ID</th>-->
         <th>Acrobatics</th>
         <th>Animal Handling</th>
         <th>Arcana</th>
@@ -97,17 +130,18 @@ $statement->closeCursor();
   <?php foreach ($products as $product) : ?>
   <tr>
      <td><?php echo $product['characterID']; ?></td>
+     <td><?php echo $product['charName']; ?></td>
      <td><?php echo $product['race']; ?></td>
      <td><?php echo $product['class']; ?></td>
      <td><?php echo $product['gender']; ?></td>
-     <td><?php echo $product['abilityID']; ?></td>
+     <!--<td><?php //echo $product['abilityID']; ?></td>-->
      <td><?php echo $product['strength']; ?></td>
      <td><?php echo $product['dexterity']; ?></td>
      <td><?php echo $product['constitution']; ?></td>
      <td><?php echo $product['intelligence']; ?></td>
      <td><?php echo $product['wisdom']; ?></td>
      <td><?php echo $product['charisma']; ?></td>
-     <td><?php echo $product['skillID']; ?></td>
+     <!--<td><?php //echo $product['skillID']; ?></td>-->
      <td><?php echo $product['acrobatics']; ?></td>
      <td><?php echo $product['animalHandling']; ?></td>
      <td><?php echo $product['arcana']; ?></td>
@@ -128,7 +162,7 @@ $statement->closeCursor();
      <td><?php echo $product['survival']; ?></td>
      <td>
         <form action="../updateCharacter/update.php" method="post">
-                <input type="hidden" name="characterID" 
+                <input type="hidden" name="characterID"
                        value="<?php echo htmlspecialchars($product['characterID']); ?>">
                 <input type="submit" value="Edit">
             </form>
@@ -137,9 +171,8 @@ $statement->closeCursor();
   <?php endforeach; ?>
   </tbody>
   </table>
-
+</div
 
 </body>
 
 </html>
-
