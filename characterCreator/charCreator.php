@@ -1,3 +1,4 @@
+<!--charCreator.php-->
 <!DOCTYPE html>
 
 <html>
@@ -9,6 +10,83 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../resources/styleCharCreator.css">
         <link rel="stylesheet" type="text/css" href="../landing/style.css"/>
+        <style>
+        body {
+           /* margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            position: relative;
+            background-color: black;*/
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: block;
+            margin: 0% auto; /* Center the button horizontally */
+            background-color: #333f31;
+            border-radius: 25px;
+            border-color: #5B9F6B;
+        }
+
+
+button:hover {
+    background-color: #3f6b4a; /* Darker green */
+    border-radius: 25px;
+}
+
+button:active {
+    transform: translateY(1px); /* Add slight downward movement on click */
+}
+        #toggleButton {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+        #diceContainer {
+            display: none;
+            position: fixed;
+            bottom: 10%;
+            right: 0%;
+            background-color: #292E28;
+            border: 1px solid #5B9F6B;
+            border-radius: 5px;
+            padding: 0%;
+            margin: 1%;
+            text-align: center;
+        }
+        #diceCanvas {
+            width: auto;
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Center the canvas horizontally */
+        }
+        #diceNumber {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 10px;
+            color:  white;
+            margin-bottom: 1%;
+        }
+        #rollButton{
+            margin-top: 2%;
+            margin-right: auto;
+            margin-bottom: 0%;
+            margin-left: auto;
+            color: white;
+
+        }
+        #toggleDiceButton{
+            color: white;
+        }
+    </style>
     </head>
     <body>
 
@@ -17,9 +95,10 @@
 <div class="nav-container" style="margin: 2%">
       <nav>
          <ul>
+            <li><a href="../landing/index.html">Home</a></li>
             <li><a href="../characterCreator/charCreator.php">Create from scratch</a></li>
-            <li><a href="generateCharacter.php">Generate using AI</a></li>
-            <li><a href="generateImage.php">Generate an image of a character</a></li>
+            <li><a href="../generateCharacter.php">Generate using AI</a></li>
+            <li><a href="../generateImage.php">Generate an image of a character</a></li>
             <li><a href="../characterDB/charDB.php">View the character database</a></li>
 
             <li><a href="../bugReport/bugReport.php">Report a bug</a></li>
@@ -124,5 +203,16 @@
                 </form>
             </div>
         </div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script src="../resources/script.js"></script>
+<div id="toggleButton">
+        <button id="toggleDiceButton">Toggle Dice</button>
+    </div>
+    <div id="diceContainer">
+        <button id="rollButton">Roll Dice</button>
+        <canvas id="diceCanvas"></canvas>
+        <div id="diceNumber"></div>
+    </div>
     </body>
 </html>
