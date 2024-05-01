@@ -8,7 +8,7 @@ body {
     flex-flow: row wrap;
     /* flex-direction: row; */
     gap: 1em;
-    width: 60%;
+    width: 38%;
     margin: auto;
     background-color:rgba(22, 23, 23, 0.8);
     border-radius: 4px;
@@ -28,7 +28,18 @@ body {
    font-family: Draconis;
    src: url(../resources/fonts/draconis/Draconis.otf);
 }
-input[type=number] {
+
+.abilities input {
+    width: 18%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.skills input {
     width: 18%;
     padding: 6px 10px;
     margin: 8px 0;
