@@ -86,6 +86,13 @@ button:active {
         #toggleDiceButton{
             color: white;
         }
+        #footer {
+           position: relative;
+           bottom: 0;
+           width: 100%;
+           height: 2.5rem;
+           color: white;
+        }
     </style>
     </head>
     <body>
@@ -214,5 +221,9 @@ button:active {
         <canvas id="diceCanvas"></canvas>
         <div id="diceNumber"></div>
     </div>
-    </body>
+    <div id="footer">
+       <footer style="">Copyright &copy; 2024 Alec Manzer, Sam Zito, Fernando Moran, Janine Beall, Kennedy Greene</footer>
+    </div>
+                    
+</body>
 </html>
