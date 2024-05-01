@@ -5,6 +5,9 @@
    <title>D&D Character Creator</title>
    <link rel="stylesheet" type="text/css" href="style.css"/>
 <style>
+  body {
+     background-image: url("../resources/dndbackground.jpg");
+  }
         body {
            /* margin: 0;
             overflow: hidden;
@@ -80,6 +83,13 @@ button:active {
         #toggleDiceButton{
             color: white;
         }
+        #footer {
+           position: absolute;
+           bottom: 0;
+           width: 100%;
+           height: 2.5rem;
+           color: white;
+}
     </style>
 </head>
 
@@ -116,13 +126,9 @@ button:active {
         <div id="diceNumber"></div>
     </div>
 </main>
-<footer style="">Copyright &copy; 2024 Alec Manzer, Sam Zito,
-    Fernando Moran, Janine Beall, Kennedy Greene</footer>
+<div id="footer">
+   <footer style="">Copyright &copy; 2024 Alec Manzer, Sam Zito, Fernando Moran, Janine Beall, Kennedy Greene</footer>
+</div>
 
 </body>
-
-<style>
-  body {
-     background-image: url("../resources/dndbackground.jpg");
-  }
-</style>
+</html>
