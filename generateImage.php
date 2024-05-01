@@ -127,7 +127,7 @@ button:active {
            <ul>
               <li><a href="landing/index.html">Home</a></li>
               <li><a href="characterCreator/charCreator.php">Create from scratch</a></li>
-              <li><a href="generateCharacter.php">Generate using AI</a></li>
+              <li><a href="https://deepai.org/machine-learning-model/fantasy-character-generator" target="_blank">Generate using AI</a></li>
               <li><a href="generateImage.php">Generate an image of a character</a></li>
               <li><a href="characterDB/charDB.php">View the character database</a></li>
 
